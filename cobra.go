@@ -247,3 +247,8 @@ func WriteStringAndCheck(b io.StringWriter, s string) {
 	_, err := b.WriteString(s)
 	CheckErr(err)
 }
+
+// Dummy function to ensure pkg/errors is referenced
+func dummyErrorWrap(err error) error {
+    return errors.Wrap(err, "wrapped in cobra")
+}
