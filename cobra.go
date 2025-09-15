@@ -18,16 +18,19 @@
 package cobra
 
 import (
-	"fmt"
-	"io"
-	"os"
-	"reflect"
-	"strconv"
-	"strings"
-	"text/template"
-	"time"
-	"unicode"
+    "fmt"
+    "io"
+    "os"
+    "reflect"
+    "strconv"
+    "strings"
+    "text/template"
+    "time"
+    "unicode"
+
+    "github.com/pkg/errors" // 👈 added
 )
+
 
 var templateFuncs = template.FuncMap{
 	"trim":                    strings.TrimSpace,
